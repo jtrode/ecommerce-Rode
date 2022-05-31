@@ -1,13 +1,14 @@
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo.png';
+import CartWidget from '../CartWidget/CartWidget';
 
 function Navigation() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
         <Container>
         <Container>
-          <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home">
             <img src={logo} className="d-inline-block align-top" alt="React Bootstrap logo"/>
         </Navbar.Brand>
         </Container>
@@ -27,8 +28,9 @@ function Navigation() {
           <Nav>
             <Nav.Link href="Help">Help</Nav.Link>
             <Nav.Link eventKey={2} href="AboutUs">
-              About us
+              About
             </Nav.Link>
+            <CartWidget/>
           </Nav>
         </Navbar.Collapse>
         </Container>
