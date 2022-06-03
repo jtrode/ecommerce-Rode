@@ -1,8 +1,12 @@
 import React from 'react'
+import ItemCount from '../../components/ItemCount/ItemCount';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <p>Home</p>
+      <ItemCount/>
+    </div>
   )
 }
 

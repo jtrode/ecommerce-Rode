@@ -8,7 +8,7 @@ function Navigation() {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
         <Container>
         <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
             <img src={logo} className="d-inline-block align-top" alt="React Bootstrap logo"/>
         </Navbar.Brand>
         </Container>
