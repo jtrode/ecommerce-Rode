@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import useState from "react";
 
-const ItemCount = () => {
+const ItemCount = ( props ) => {
 
   const [contador, setContador] = useState(0);
 
   
   const incrementar = () => {
 
+    if(contador < props.stock)
     setContador(contador + 1);
 
   };
