@@ -13,13 +13,9 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
 
-  let greetingsMessage = 'Say my name'
-
-
   return (        
     <div className="App">
-          <NavBar/>  
-          <ItemListContainer greetings = {greetingsMessage} />          
+          <NavBar/>           
           <Routes>                
              <Route path='/Food' element={<Food/>}/>  
              <Route path='/Drinks' element={<Drinks/>}/>               
