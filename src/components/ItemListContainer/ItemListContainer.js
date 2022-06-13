@@ -1,10 +1,9 @@
-import ItemCount from "../ItemCount/ItemCount"
 import { useState, useEffect } from "react";
 import { getFetch } from "../../helpers/getFetch";
 import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
-
+    
 const [productos, setProductos] = useState([])
 const [loading, setLoading] = useState(true)
     
@@ -26,7 +25,7 @@ return (
             { loading ? 
                 <h1>Cargando...</h1>            
             :   
-				<div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}> 
+				<div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', flexGrow: '10'}}> 
 			    <ItemList productos = {productos}/>
 				</div>             
             }
