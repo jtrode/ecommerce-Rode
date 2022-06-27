@@ -8,17 +8,31 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 const ItemDetailContainer = () => {
 
   const [producto, setProducto] = useState({})	
+  const [loading, setLoading] = useState(true)
   
   const { id } = useParams()
 
   useEffect(() => { 
     getFetchById(id)
-        .then((resp) => setProducto(resp))
+        .then((resp) => { 
+        setProducto(resp)
+        setLoading(false)
+        })
         .catch(err => console.log(err))
     }, [])
 
-  return <ItemDetail prod={producto} />
-
+  return(
+  <div>
+      {
+          loading ?
+          <h1>Cargando...</h1> 
+          :
+          <div>
+                <ItemDetail prod={producto} />
+            </div>
+      }
+  </div>
+  ) 
 }
 
 export default ItemDetailContainer

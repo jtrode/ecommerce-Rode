@@ -7,10 +7,10 @@ const ItemDetail = ({prod}) => {
                 <button className="btn btn-outline-primary btn-block">
                     back to products
                 </button> </Link>  
-        <div className='col-md-20 p-5' key={prod.id}>                        
+        <div className='col-md-6 p-3' key={prod.id}>                        
         
-        <div className="card w-10 mt-3">
-        <img className="card-img-top" rounded src={`prod.foto`}  display="block" max-width="100%" height="auto"/>
+        <div className="card w-6 mt-2">
+        <img className="card-img-top" rounded src={prod.foto} alt="Card image cap" display="block" max-width="50%"  max-height="50%" height="500px"/>
             <div className="card-header">
                 {`${prod.name} -                 
                 Category: ${prod.category}`}
